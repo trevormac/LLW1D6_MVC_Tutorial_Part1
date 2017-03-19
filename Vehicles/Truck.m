@@ -61,7 +61,7 @@
     [truckDetailsBuilder appendString:@"\n\nTruck-Specific Details:\n\n"];
     
     //Add info about truck-specific features.
-    [truckDetailsBuilder appendFormat:@"Cargo Capacity: %d cubic feet", self.cargoCapacityCubicFeet];
+    [truckDetailsBuilder appendFormat:@"Cargo Capacity: %ld cubic feet", (long)self.cargoCapacityCubicFeet];
     
     //Create the final string by combining basic and truck-specific details.
     NSString *truckDetails = [basicDetails stringByAppendingString:truckDetailsBuilder];

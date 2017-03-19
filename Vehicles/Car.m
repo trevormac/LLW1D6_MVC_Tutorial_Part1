@@ -79,7 +79,7 @@
         [carDetailsBuilder appendString:no];
     }
     
-    [carDetailsBuilder appendFormat:@"Number of doors: %d", self.numberOfDoors];
+    [carDetailsBuilder appendFormat:@"Number of doors: %ld", (long)self.numberOfDoors];
     
     //Create the final string by combining basic and car-specific details.
     NSString *carDetails = [basicDetails stringByAppendingString:carDetailsBuilder];

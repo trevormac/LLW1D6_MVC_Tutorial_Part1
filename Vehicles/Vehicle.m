@@ -47,7 +47,7 @@
 #pragma mark - Convenience Methods
 -(NSString *)vehicleTitleString
 {
-    return [NSString stringWithFormat:@"%d %@ %@", self.modelYear, self.brandName, self.modelName];
+    return [NSString stringWithFormat:@"%ld %@ %@", (long)self.modelYear, self.brandName, self.modelName];
 }
 
 -(NSString *)vehicleDetailsString
@@ -57,9 +57,9 @@
     [basicDetailsString appendString:@"Basic vehicle details:\n\n"];
     [basicDetailsString appendFormat:@"Brand name: %@\n", self.brandName];
     [basicDetailsString appendFormat:@"Model name: %@\n", self.modelName];
-    [basicDetailsString appendFormat:@"Model year: %d\n", self.modelYear];
+    [basicDetailsString appendFormat:@"Model year: %ld\n", (long)self.modelYear];
     [basicDetailsString appendFormat:@"Power source: %@\n", self.powerSource];
-    [basicDetailsString appendFormat:@"# of wheels: %d", self.numberOfWheels];
+    [basicDetailsString appendFormat:@"# of wheels: %ld", (long)self.numberOfWheels];
     
     return [basicDetailsString copy];
 }
